@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Sound Board</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>DnD Sound Board</h1>
+
+    <div class="button-rows">
+      <button id="bat" onclick="playSound('sounds/done/BAT!.mp3')">BAT!</button>
+      <button id="barret_50_cal" onclick="playSound('sounds/done/Barrett 50 Cal Sniper.mp3')">50 cal</button>
+      <button id="eldritch_blast" onclick="playSound('sounds/done/BG3 - Eldritch Blast.mp3')">Eldritch BBBLAST</button>
+      <button id="taco_bell" onclick="playSound('sounds/done/taco-bell-bong.mp3')">Taco Bell</button>
+    </div>
+
+    <audio id="audioPlayer" src="" hidden></audio>
+
+    <script>
+      function playSound(soundFile) {
+        const audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.src = soundFile;
+        audioPlayer.play();
+      }
+    </script>
+  </body>
+</html>
